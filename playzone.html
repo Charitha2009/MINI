@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PLAYZONE</title>
+<style>
+h1{text-align: center; font-size: 60px; font-style: oblique;}
+h2{
+  font-size: 30px;
+  font-style: italic;
+}
+ul {
+  list-style-type:none;
+  margin: 10;
+  padding: inherit;
+  overflow: auto;
+  font: 40px;
+}
+
+li {
+  font-size: 40px;
+  float:left;
+}
+
+li a {
+  display: inline;
+  color: white;
+  text-align: center;
+  padding:15px 20px;
+  text-decoration: inherit;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  float: right;
+  font-size: 20px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+#id02, .flip {
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  background-color:Black;
+  color: white;
+  border: solid 1px #a6d8a8;
+  margin: 20px,40px;
+  padding-left: 20px;
+
+}
+
+#id02{
+
+  display: none;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+.navigation-bar ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+
+}
+.navigation-container{
+  background-color:inherit;
+  background-blend-mode: hard-light;
+}
+.ludo_section{
+  padding: center;
+
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 350px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+video{
+  align-items: center;
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 200px;
+}
+
+div.desc {
+  padding: 10px;
+  color: white;
+  size:30px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  align-items: center;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+</style>
+<script src="playzonejs.js"></script>
+<body style="background-image: url('brick.jpg')">
+<div class="navigation-bar">
+  <div id="navigation-container">
+<img src="Logo.png" height="100" width="200" align:left >
+<ul>
+  <li><a class="active" href="#Home"><button style="background-color: inherit">Home</button></a></li>
+  <li><a href="AboutUs.html" target="_blank"><button style="background-color:inherit">About us</button></a></li>
+  <li><a href="https://forms.gle/z786ubakxPmsWxJy9"target="_blank"><button style="background-color:inherit">Feedback</button></a></li>
+</ul>
+  </div>
+</div>
+<div id='id02' class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <!-- <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src=" C:\Users\Veda Charitha Bellam\Desktop\login_logo.png" alt="Avatar" class="avatar">
+    </div> -->
+  <div class="container">
+    <form>
+      <label for="fname"><b>Firstname</b></label>
+      <input type="text" placeholder="Enter Firstname" name="fname" required>
+      <label for="lname"><b>Lastname</b></label>
+      <input type="text" id="lname" placeholder="Enter Lastname"ś required>
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="fname" required>
+      <label for="pswd"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <button type="button" onclick="some()">SUBMIT</button>
+    </form>
+  </div>
+</div>
+<script>
+function Signup_fun(){
+  document.getElementById("id02").style.display = "block";
+}
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<br>
+<div style="background-image: url('flo.jpg')">
+<video height="450" width="100%" autoplay>
+  <source src="joined.mp4" type="video/mp4">
+</video></div>
+<div style="background-image: url('flo.jpg')">
+<h1 style="color:red" text-align:centre>Be a game changer<br></h1>
+<h1 style="color:white" text-align:centre><strong>The World is already full of players</strong></h1>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ludo_game.html">
+      <img src="play.jpg"  width="200" height="100">
+    </a>
+    <div class="desc">LUDO!!<br> The most exciting game of all time.</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="uno_game.html">
+      <img src="uno_img.jpg"  width="600" height="200">
+    </a>
+    <div class="desc">UNO!!<br> The game of challengers.</div>
+  </div>
+</div>
+
+<!--<footer>
+  <p> Follow us on <img src="git.svg" height="20%" width="20%"></p>
+</footer>-->
+</body>
+</html>

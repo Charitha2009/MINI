@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FEEDBACK</title>
+<style>
+  h1{
+    color:black;
+  }
+
+    section{
+      background-image: url('brick_bro.jpg');
+      width:100%
+      color:white;
+      font-style:normal;
+      font-size:20px;
+    }
+    .container{
+      padding:30px;
+      border-radius:30px;
+      font-size:30px;
+    }
+    input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #256;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+button{
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  width: 100%;
+  float: right;
+  font-size: 20px;
+}
+</style>
+<body style="background-image: url('rock_stone.jpg')">
+  <img src="feed.png" style="position:centre" >
+  <section>
+          <div class="container">
+            <h1> Your words are valuable to us. Kindly give us a chance to improve.</h1>
+            <form action="feed.php" method="post">
+            <label class="radio-inline"> USER-FRIENDLY:
+            <input type="radio" name="gamefeedback" value="a">&#128545
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="gamefeedback" value="b">&#128542
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="gamefeedback" value="c">&#128528
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="gamefeedback" value="d">&#128515
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="gamefeedback" value="e">&#128525
+            </label><br><br><hr>
+            <label class="radio-inline">LUDO:
+            <input type="radio" name="ludo" value="a">&#128545
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="ludo" value="b">&#128542
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="ludo" value="c">&#128528
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="ludo" value="d">&#128515
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="ludo" value="e">&#128525
+            </label><br><br><hr>
+            <label class="radio-inline"> UNO:
+            <input type="radio" name="uno" value="a" >&#128545
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="uno" value="b">&#128542
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="uno" value="c">&#128528
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="uno" value="d">&#128515
+            </label>
+            <label class="radio-inline">
+            <input type="radio" name="uno" value="e">&#128525
+            </label><hr>
+            <label class="radio-inline"> HANGMAN:
+              <input type="radio" name="hangman" value="a">&#128545
+              </label>
+              <label class="radio-inline">
+              <input type="radio" name="hangman" value="b">&#128542
+              </label>
+              <label class="radio-inline">
+              <input type="radio" name="hangman" value="c">&#128528
+              </label>
+              <label class="radio-inline">
+              <input type="radio" name="hangman" value="d">&#128515
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="hangman" value="e">&#128525
+                </label><hr>
+            <br>
+            <label for="remarks"  name="remarks">Remarks</label><br>
+            <input type="text" id="fname" name="fname">
+<hr>
+            <button>SUBMIT</button>
+            <br>
+            <br>
+            </form>
+          </div>
+  </section>
+
+</body>
+</html>

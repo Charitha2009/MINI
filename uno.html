@@ -1,0 +1,134 @@
+<html>
+<script src="uno.js"></script>
+<style>
+	body {margin: auto;
+	 text-align: center
+	}
+#container {
+	font-weight: bold;
+	 width: 80%; margin: auto;
+	  height: 600px
+	}
+#header {
+	background-color:ivory;
+	 font-size: 25px;
+	  float: left;
+	   width: 100%
+	}
+#content
+ {
+ 	background-color: darkgreen;
+ 	 width: 100%;
+ 	  float: left;
+ 	   height: 380px;
+ 	    font-size: 25px
+ 	}
+#card1, #card2, #card3, #card4, #card5, #card6, #card8, #card9, #card10, #card11, #card12, #card13, #card15, #card16, #card17, #card18, #card19, #card20, #card22, #card23, #card24, #card25, #card26, #card27 {
+	float: left;
+	 background-color: white;
+	  margin: 10px 0px 0px 10px;
+	   width: 40px;
+	    height: 50px;
+	     border-radius: 5px;
+	      line-height: 50px
+	  }
+#tableCard {
+	clear: left;
+	 float: left;
+	  width: 96px;
+	   line-height: 120px;
+	    background-color: white;
+	     height: 120px;
+	      margin-left: 132px;
+	       border-radius: 12px;
+	        margin-top: 10px;
+	         font-size: 50px
+	     }
+#card0, #card1, #card2, #card3, #card4, #card5, #card7, #card6, #card8, #card9, #card10, #card11, #card12, #card13 {visibility: hidden}
+#deck {
+	float: right;
+	 margin-right: 20px;
+	  height: 40px;
+	   width: 50px;
+	    background-color: white;
+	     line-height: 40px; 
+	     border-radius: 5px;
+	      margin-top: 50px;
+	       font-size: 15px;
+	        box-shadow: 0px 8px #808080
+	    }
+#card0, #card7, #card14, #card21 {
+float: left;
+ background-color: white;
+  margin: 10px 0px 0px 10px;
+   width: 40px; height: 50px;
+    clear: left;
+     border-radius: 5px;
+      line-height: 50px
+  }
+#userMenu {
+	width: 100%;
+	 height: 102px;
+	  background-color: black;
+	   color: white;
+	    float: left;
+	     clear: left;
+	      text-align: left
+	  }
+button {
+	margin: 10px 0px 0px 10px;
+	 font-size: 15px;
+	  border-radius: 5px;
+	   background-color: #808080;
+	    color: white;
+	     font-weight: bold
+	 }
+#result {
+	margin: 10px;
+	 text-align: center; 
+	 font-weight: bold;
+	  font-size: 20px
+	}
+#counter {font-size: 0px}
+</style>
+<body background="table.jpg"><div id=container>
+<div id="header">UNO</div>
+<div id="content">
+    <div id=card0></div>
+    <div id=card1></div>
+    <div id=card2></div>
+    <div id=card3></div>
+    <div id=card4></div>
+    <div id=card5></div>
+    <div id=card6></div>
+    <div id=card7></div>
+    <div id=card8></div>
+    <div id=card9></div>
+    <div id=card10></div>
+    <div id=card11></div>
+    <div id=card12></div>
+    <div id=card13></div>
+    <div id=tableCard></div> <!-- Code made by cheeze -->
+    <div id=deck onclick="drawCard()">Draw</div>
+    <div id=card14 onclick="playCard(14)"></div>
+    <div id=card15 onclick="playCard(15)"></div>
+    <div id=card16 onclick="playCard(16)"></div>
+    <div id=card17 onclick="playCard(17)"></div>
+    <div id=card18 onclick="playCard(18)"></div>
+    <div id=card19 onclick="playCard(19)"></div>
+    <div id=card20 onclick="playCard(20)"></div>
+    <div id=card21 onclick="playCard(21)"></div>
+    <div id=card22 onclick="playCard(22)"></div>
+    <div id=card23 onclick="playCard(23)"></div>
+    <div id=card24 onclick="playCard(24)"></div>
+    <div id=card25 onclick="playCard(25)"></div>
+    <div id=card26 onclick="playCard(26)"></div>
+    <div id=card27 onclick="playCard(27)"></div>
+</div>
+<div id=userMenu>
+<button onclick="showCards()">Show cards</button><button onclick="newGame()">New Game</button><button onclick="hideCards()">Hide cards</button>
+<p id=result>You go first!</p>
+<p id=counter></p>
+</div>
+</div></body>
+</html>
